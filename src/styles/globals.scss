@@ -1,0 +1,32 @@
+@use 'shared.scss' as shared;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #10141E;
+    font-family: 'Outfit-Light', sans-serif;
+    color:white;
+}
+
+h1 {
+    letter-spacing: 0.06rem
+}
+
+@font-face {
+    font-family: 'Outfit-light';
+    src:url('../../public/static/fonts/Outfit-Light.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit-Medium';
+    src:url('../../public/static/fonts/Outfit-Medium.ttf');
+    font-display: swap;
+}

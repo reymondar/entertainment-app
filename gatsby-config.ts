@@ -13,7 +13,17 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": "./src/images/",
+      sassOptions: {
+        includePaths: ["absolute/path/a", "absolute/path/b"]
+      },
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
+
     },
     __key: "images"
   }]
