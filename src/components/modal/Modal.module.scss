@@ -3,7 +3,8 @@
 
 .container {
    height: 100vh;
-   
+   z-index: 2;
+   background-color: #7ac142;
    .modal {
       position: absolute;
       top: 50%;
@@ -21,7 +22,7 @@
 
       padding: 3rem;
 
-
+      z-index: 3;
       .wrapper {
          height:100%;
          display:flex;

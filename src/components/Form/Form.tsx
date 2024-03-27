@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { SetStateAction, useState } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { FormProps, FormField } from "../../types"
 import * as styles from './Form.module.scss'
@@ -10,8 +10,11 @@ type Inputs = {
   password: string
 }
 
+interface MultiFormProps extends FormProps {
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>
+}
 
-const MultiForm = ({type, items}: FormProps ) => {
+const MultiForm = ({setIsOpen, type, items}: MultiFormProps ) => {
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -31,7 +34,7 @@ const MultiForm = ({type, items}: FormProps ) => {
         
         localStorage.setItem('sessionId',sessionId.session_id)
         
-        navigate("/")
+        setIsOpen(true)
       }
       catch (error: any) {
         if (error.message === 'Invalid username and/or password: You did not provide a valid login.') setError('root', {type: 'credentials', message: 'You did not provide a valid login.'})

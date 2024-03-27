@@ -6,7 +6,6 @@ import Catalog from "../components/Catalog/Catalog"
 import { graphql, useStaticQuery } from 'gatsby'
 import CarouselCatalog from "../components/Carousel/Catalog"
 import { MoviesQuery, SeriesQuery } from "../types"
-import Modal from "../components/modal/Modal"
 
 const IndexPage: React.FC<PageProps> = () => {
 
@@ -69,7 +68,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return(
       <Layout>   
-             <Modal />
         <SearchBar placeholder='Search for movies or TV Series' setSearch={setSearch} />
         <CarouselCatalog movies={allUpcomingMovieCatalog.nodes} />
         <Suspense fallback={<div>Loading..</div>}>

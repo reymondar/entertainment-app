@@ -2,7 +2,6 @@ require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`,
 })
 
-
 const PATH  = process.env.PATH
 const TOKEN = process.env.BEARER_TOKEN
 const fetch = require('node-fetch')
