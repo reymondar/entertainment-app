@@ -1,9 +1,9 @@
 
 const token = process.env.BEARER_TOKEN
-const baseURL = process.env.PATH
+const baseURL = process.env.BASE_URL
 const API_KEY = process.env.API_KEY
 
-const loginUser = async (data) => {
+const loginUser = async (data: any) => {
    try {
 
       //Primer paso, creamos el token
