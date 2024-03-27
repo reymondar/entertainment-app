@@ -1,0 +1,27 @@
+@use '../../styles/shared.scss' as shared;
+
+.title {
+    font-size: 3.2rem;
+    margin: 3.2rem 0;
+}
+
+.catalog {
+    display: grid;
+    @include shared.desktop-only {
+        grid-template-columns: repeat(auto-fit , 28rem);
+        grid-template-rows: repeat(auto-fit , 23rem);
+        gap: 3.4rem 4rem;
+    }
+    @include shared.tablet-only {
+        place-content: center;
+        grid-template-columns: repeat(3, 22rem);
+        grid-template-rows: repeat(auto-fit, 19rem);
+        gap: 2.4rem 3rem;
+    }
+    @include shared.mobile-only {
+        place-content: center;
+        grid-template-columns: repeat(auto-fill, 16.5rem);
+        grid-auto-rows: 15.5rem;
+        gap: 1.7rem 1.5rem;
+    }
+}

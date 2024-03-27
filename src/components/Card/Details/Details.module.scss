@@ -1,0 +1,63 @@
+@use '../../../styles/shared.scss' as shared;
+
+.details {
+    display: flex;
+    
+    @include shared.desktop-only {
+        
+        justify-content: flex-start;
+        font-size: 1.3rem;
+        padding-left: -1rem;
+    }
+    
+    @include shared.tablet-only {
+        width: 12.6rem;
+    }
+    
+    @include shared.mobile-only {
+        width: 11.2rem;
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+    li {
+        list-style-type: none;
+        display: flex;
+        align-content: center;
+        
+        .iconContainer {
+            align-self: center;
+            margin-right: 0.5rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            
+            @include shared.mobile-only {
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    li:not(:first-child)::before {
+        content: "•";
+        margin: 0 0.8rem;
+
+        @include shared.mobile-only {
+            margin: 0 0.35rem;
+        }
+    }
+
+
+}
+
+h1 {
+    width: fit-content;
+    font-size: 1.8rem;
+
+    @include shared.mobile-only {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../styles/shared.scss' as shared;
+
+ 
+.title {
+    font-size: 3.2rem;
+    margin: 3.2rem 0;
+}
+//Carousel usado en index.tsx
+.carousel {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include shared.desktop-only {
+        
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none; 
+    }
+   
+    
+
+    .catalog_carousel {
+        
+        box-sizing: border-box;
+        display: flex;
+        
+        @include shared.not-mobile {
+            margin-right: 4rem;
+            
+        }
+
+        @include shared.mobile-only {
+            width: 24rem;
+            height: 14rem
+        }
+    }
+}

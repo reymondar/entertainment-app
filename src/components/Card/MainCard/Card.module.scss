@@ -1,0 +1,71 @@
+@use '../../../styles/shared.scss' as shared;
+
+.container {
+    flex-shrink: 0;
+    @include shared.desktop-only {
+        width: 28rem;
+        height: 22.6rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    @include shared.tablet-only {
+        width: 22rem;
+        height: 19rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    @include shared.mobile-only {
+        width: 16.4rem;
+        height:1.1rem;
+    }
+
+    .banner {
+        width: 100%;
+        border-radius: 0.8rem;
+        display: flex;
+        justify-content: flex-end;
+        
+        @include shared.desktop-only {
+            min-height: 17.4rem;
+        }
+        @include shared.tablet-only {
+            min-height: 14rem;
+        }
+        @include shared.mobile-only {
+           min-height: 11rem;
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 100px;
+            margin: 1.8rem 0.9rem 0 0;
+            background-color: black;
+            opacity: 0.5;
+
+
+            @include shared.mobile-only {
+                margin: 0.8rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    
+    
+}
+

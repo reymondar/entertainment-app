@@ -1,26 +1,7 @@
-$black: #000000;
-$light-blue: #D9F5FC;
-$white: #FEFDF3;
-
-$mobileXspacing: 100vw/50;
-$mobileYspacing: 100vh/106;
-
-$mobile-spacing: 100vmin/50;
-$mobile-max-spacing: 100vmax/106;
-
-$tabletXspacing: 100vw/104.25;
-$tabletYspacing: 100vh/149.25;
-
-$tablet-spacing: 100vmin/104.25;
-$tablet-max-spacing: 100vmax/149.25;
-
-$desktopXspacing: 100vw/180;
-$desktopYspacing: 100vh/128;
-
-$desktopXlargest: 1518px;
-
-$desktop-spacing: 100vmin/128;
-$desktop-max-spacing: 100vmin/180;
+$main-black: #10141E;
+$light-blue: #161D2F;
+$light-gray: #5A698F;
+$red: #FC4747;
 
 /*Typography sizes*/
 $section-title-font-size: 2rem;
@@ -70,13 +51,13 @@ $desktop-reading-font-size: 2rem;
 /*Used Fonts*/
 
 @mixin font-montserrat($weight) {
-    font-family: 'Montserrat';
+    font-family: 'Outfit-Light';
     font-style: normal;
     font-weight: $weight;
 }
 
 @mixin font-unbounded($weight) {
-    font-family: 'Unbounded';
+    font-family: 'Outfit-Medium';
     font-style: normal;
     font-weight: $weight;
 }

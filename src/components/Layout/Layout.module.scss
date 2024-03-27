@@ -1,0 +1,24 @@
+@use '../../styles/shared.scss' as shared;
+
+.main{
+    @include shared.desktop-only {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    }
+ 
+    .container { 
+        @include shared.desktop-only {
+        width: 86.7%;
+        }
+    }
+    
+
+    @include shared.tablet-only { 
+        margin: 0 2.5rem;
+    }
+
+
+    
+}
